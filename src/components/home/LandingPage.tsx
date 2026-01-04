@@ -78,7 +78,7 @@ export default function LandingPage() {
               </div>
             </section>
 
-            <section className="text-center space-y-8">
+            {/* <section className="text-center space-y-8">
               <h2 className="text-4xl md:text-5xl font-serif text-primary">Our Collection</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {[1, 2, 3].map((i) => (
@@ -87,7 +87,7 @@ export default function LandingPage() {
                   </div>
                 ))}
               </div>
-            </section>
+            </section> */}
 
           </div>
         </div>
