@@ -53,13 +53,13 @@ export default function LandingPage() {
         <section className="flex min-h-screen flex-col items-center justify-center p-4 text-center">
 
           {/* Animated Heading with "animation image" in middle */}
-          <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl text-[#F9EFEA] tracking-tighter drop-shadow-lg mix-blend-overlay opacity-90 flex flex-col md:flex-row items-center gap-4 md:gap-8 animate-in fade-in zoom-in duration-1000">
+          <h1 className="font-inter text-6xl md:text-8xl lg:text-9xl text-[#F9EFEA] tracking-tighter drop-shadow-lg mix-blend-overlay opacity-90 flex flex-col md:flex-row items-center gap-4 md:gap-8 animate-in fade-in zoom-in duration-1000 select-none caret-transparent">
             <span className="font-normal text-[167.463px]">Pearl</span>
 
             <span className="font-normal text-[167.463px]">Essence</span>
           </h1>
 
-          <p className="mt-6 max-w-lg text-lg md:text-xl text-[#F9EFEA]/90 font-light tracking-widest uppercase">
+          <p className="mt-6 max-w-lg text-lg md:text-xl text-[#F9EFEA]/90 font-light tracking-widest uppercase select-none caret-transparent">
             Pure • Natural • Radiant
           </p>
 
