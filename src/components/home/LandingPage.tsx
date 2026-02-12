@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import NavBar from "@/components/navigation/NavBar";
 
 export default function LandingPage() {
   // Use state to handle scroll-based color changes if needed, 
@@ -42,6 +43,9 @@ export default function LandingPage() {
 
       </div>
 
+      {/* Navigation Bar */}
+      <NavBar />
+
       {/* Main Content Overlay */}
       <div className="relative z-10 flex flex-col items-center w-full">
 
@@ -51,7 +55,7 @@ export default function LandingPage() {
           {/* Animated Heading with "animation image" in middle */}
           <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl text-[#F9EFEA] tracking-tighter drop-shadow-lg mix-blend-overlay opacity-90 flex flex-col md:flex-row items-center gap-4 md:gap-8 animate-in fade-in zoom-in duration-1000">
             <span className="font-normal text-[167.463px]">Pearl</span>
-            
+
             <span className="font-normal text-[167.463px]">Essence</span>
           </h1>
 

@@ -32,7 +32,7 @@
   --color-chart-5: var(--chart-5);
   --radius: 0.5rem;
   --font-serif: var(--font-playfair);
-  --font-sans: var(--font-playfair);
+  --font-sans: var(--font-inter);
 }
 
 :root {
