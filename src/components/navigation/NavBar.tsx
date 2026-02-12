@@ -2,11 +2,13 @@
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 export default function NavBar() {
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,8 +19,8 @@ export default function NavBar() {
   }, []);
 
   const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "Products", href: "#products" },
+    { name: "Home", href: "/" },
+    { name: "Products", href: "/products" },
     { name: "About Us", href: "#about" },
     { name: "Contact", href: "#contact" },
   ];
@@ -41,31 +43,35 @@ export default function NavBar() {
           scrolled && "bg-white/15 shadow-[0_8px_40px_0_rgba(0,0,0,0.15)]"
         )}
       >
-        {navItems.map((item, index) => (
-          <Button
-            key={item.name}
-            asChild
-            variant="ghost"
-            size="sm"
-            className={cn(
-              "relative px-6 py-2.5 h-auto",
-              "text-sm font-semibold tracking-wide",
-              "text-white/90",
-              "rounded-full",
-              "font-sans",
-              "transition-all duration-300 ease-out",
-              "hover:bg-white/20 hover:text-white",
-              "hover:shadow-[0_4px_16px_0_rgba(255,255,255,0.1)]",
-              "active:scale-95",
-              "[text-shadow:0px_2px_4px_rgba(0,0,0,0.2)]",
-              index === 0 && "bg-white/15 text-white"
-            )}
-          >
-            <Link href={item.href}>
-              <span className="relative z-10">{item.name}</span>
-            </Link>
-          </Button>
-        ))}
+        {navItems.map((item) => {
+          const isActive = pathname === item.href;
+
+          return (
+            <Button
+              key={item.name}
+              asChild
+              variant="ghost"
+              size="sm"
+              className={cn(
+                "relative px-6 py-2.5 h-auto",
+                "text-sm font-semibold tracking-wide",
+                "text-white/90",
+                "rounded-full",
+                "font-sans",
+                "transition-all duration-300 ease-out",
+                "hover:bg-white/20 hover:text-white",
+                "hover:shadow-[0_4px_16px_0_rgba(255,255,255,0.1)]",
+                "active:scale-95",
+                "[text-shadow:0px_2px_4px_rgba(0,0,0,0.2)]",
+                isActive && "bg-white/15 text-white"
+              )}
+            >
+              <Link href={item.href}>
+                <span className="relative z-10">{item.name}</span>
+              </Link>
+            </Button>
+          );
+        })}
       </div>
     </nav>
   );

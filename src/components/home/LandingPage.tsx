@@ -82,17 +82,6 @@ export default function LandingPage() {
               </div>
             </section>
 
-            {/* <section className="text-center space-y-8">
-              <h2 className="text-4xl md:text-5xl font-serif text-primary">Our Collection</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {[1, 2, 3].map((i) => (
-                  <div key={i} className="aspect-[3/4] bg-white/50 border border-white/40 rounded shadow-sm hover:shadow-md transition-all duration-500 cursor-pointer group flex items-center justify-center">
-                    <span className="opacity-0 group-hover:opacity-100 transition-opacity">View Product</span>
-                  </div>
-                ))}
-              </div>
-            </section> */}
-
           </div>
         </div>
 
