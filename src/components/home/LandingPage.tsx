@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import NavBar from "@/components/navigation/NavBar";
+import Footer from "@/components/footer/Footer";
 
 export default function LandingPage() {
   // Use state to handle scroll-based color changes if needed, 
@@ -84,6 +85,9 @@ export default function LandingPage() {
 
           </div>
         </div>
+
+        {/* Footer */}
+        <Footer />
 
       </div>
     </div>
